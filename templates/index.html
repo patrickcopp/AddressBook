@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="shortcut icon" href="#">
+		<title>CIS*3210 Lab</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="/css/cover.css" rel="stylesheet">
+		<link href="/css/custom.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<div class="site-wrapper">
+			<div class="site-wrapper-inner">
+				<div class="cover-container">
+
+					<div class="inner cover">
+						<h1 class="cover-heading">CIS*3210 Lab</h1>
+						{% if logged_in %}
+							<div class="lead" id=XD>Welcome, {{data}}</div>
+							<button id="logout" class="btn btn-lg btn-info">Logout</button>
+						{% else %}
+						  <div class="lead" id=XD>{{data}}</div>
+						  <form id="myForm">
+							<label for="fname">Username:</label><br>
+							<input type="text" id="username" name="username" value=""><br>
+							<label for="lname">Password:</label><br>
+							<input type="text" id="password" name="password" value=""><br><br>
+						  </form>
+						  <button id="register" class="btn btn-lg btn-info">Register</button>
+						  <button id="login" class="btn btn-lg btn-info">Login</button>
+  						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<p>Patrick Copp</p>
+			<p>1007602</p>
+		</footer>
+
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/init.js"></script>
+		
+	</body>
+</html>
